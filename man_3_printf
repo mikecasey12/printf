@@ -1,0 +1,59 @@
+.TH "_printf man page" "July 2021"
+
+.SH NAME
+_printf \- function for C language
+
+.SH SYNOPSIS
+.B #include \(dqholberton.h\(dq
+.sp
+.B int _printf(const char * format, ...);
+
+.SH DESCRIPTION
+The function 
+.I _printf() 
+is a variadic function which produces an output according to a given 
+.I format
+and returns the number of characters printed writing the output to stdout, i.e. the standard output stream.
+.sp
+.I format 
+- is a character string.
+.sp
+.B conversion specifiers 
+- are used to specify which variable type to print.
+The function handles the following
+.B conversion specifiers
+:
+.TP
+.BR
+.B c 
+- Prints a single character.
+.sp
+.B s 
+- Prints a string.
+.sp
+.B d 
+- Prints decimal.
+.sp
+.B i 
+- Prints integer.
+.sp
+Each conversion specifiers starts with
+.B % 
+to identify them.
+.sp
+.B %%
+- would print a single percent sign.
+
+.SH EXAMPLES
+_printf("Let's try to printf a simple sentence.\\n");
+.sp
+_printf("Character:[%c]\n", 'H');
+.sp
+_printf("String:[%s]\n", "I am a string !");
+
+.SH SEE ALSO
+.B man or help:
+.I printf(3)
+
+.SH AUTHORS
+Onyebuchi Michael Ikebude, Chukwunonso Ede
