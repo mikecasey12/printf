@@ -27,9 +27,14 @@ int _print(const char *format, va_list ap)
 			if (format[i] == '%')
 				count += _putchar(format[i]);
 
-			else
+			if  (_correct_spec(format[i]) == 1)
 			{
 				count += _print_id(format[i], ap);
+			}
+			else
+			{
+				count += _putchar('%');
+				count += _putchar(format[i]);
 			}
 		}
 		else
@@ -57,6 +62,11 @@ int _print_id(char format, va_list ap)
 		{"c", _print_char},
 		{"i", _print_integer_id},
 		{"d", _print_integer_id},
+		{"b", _print_bin},
+		{"u", _print_unsignint},
+		{"o", _print_oct},
+		{"x", _print_hex},
+		{"X", _print_heX},
 		{NULL, NULL}
 	};
 
@@ -68,4 +78,24 @@ int _print_id(char format, va_list ap)
 	}
 
 	return (len);
+}
+
+/**
+ * _correct_spec - conversion specifiers.
+ * @format: is a character string
+ *
+ * Return: 0 or 1
+ */
+int _correct_spec(char format)
+{
+	char _types[] = {'c', 's', 'd', 'i', 'b', '%', 'u', 'o', 'x', 'X'};
+	int i = 0;
+
+	while (_types[i])
+	{
+		if (_types[i] == format)
+			return (1);
+		i++;
+	}
+	return (0);
 }
