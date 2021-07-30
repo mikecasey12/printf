@@ -32,7 +32,7 @@ int _print_bin(va_list ap);
 int _print_oct(va_list ap);
 int _print_hex(va_list ap);
 int _print_heX(va_list ap);
-int _recursion_bin(int a);
+void _recursion_bin(int a);
 int _strlen(char *s);
 int _putchar(char c);
 
