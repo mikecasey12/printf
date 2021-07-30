@@ -25,6 +25,14 @@ int _print_id(char format, va_list ap);
 int _print_string(va_list ap);
 int _print_char(va_list ap);
 int _print_integer_id(va_list ap);
+int _print_bin(va_list ap);
+int _print_correct_spec(va_list ap);
+int _print_unsignint(va_list ap);
+int _print_bin(va_list ap);
+int _print_oct(va_list ap);
+int _print_hex(va_list ap);
+int _print_heX(va_list ap);
+int _recursion_bin(int a);
 int _strlen(char *s);
 int _putchar(char c);
 
