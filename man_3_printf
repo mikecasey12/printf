@@ -37,6 +37,21 @@ The function handles the following
 .B i 
 - Prints integer.
 .sp
+.B b 
+- Prints binary.
+.sp
+.B u 
+- Prints unsigned int.
+.sp
+.B o 
+- Prints octal.
+.sp
+.B x 
+- Prints hex.
+.sp
+.B X 
+- Prints heX.
+.sp
 Each conversion specifiers starts with
 .B % 
 to identify them.
